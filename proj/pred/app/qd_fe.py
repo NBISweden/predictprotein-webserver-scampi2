@@ -629,7 +629,7 @@ def SubmitJob(jobid, cntSubmitJobDict, numseq_this_user):#{{{
                     wsdl_url, str(e)), gen_errfile, "a", True)
                 break
 
-            [cnt, maxnum, queue_method] = cntSubmitJobDict[node]
+            [cnt, maxnum, queue_method, node_status] = cntSubmitJobDict[node]
             MAX_SUBMIT_TRY = 3
             cnttry = 0
             while cnt < maxnum and iToRun < numToRun:
